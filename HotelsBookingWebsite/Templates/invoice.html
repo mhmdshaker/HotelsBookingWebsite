@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/invoice.css') }}" />
+  </head>
+  <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            
+            <img src="{{ url_for('static',filename='styles/logo.jpg') }}" class="logo">
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">OFFERS</a></li>
+                <li><a href="room.html">ROOMS</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="user.html">DISCOVER</a></li>
+                <li><a href="history.html">HISTORY</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+    
+  <body>
+    <table class="body-wrap">
+        <tbody><tr>
+            <td></td>
+            <td class="container" width="600">
+                <div class="content">
+                    <table class="main2" width="100%" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td class="content-wrap aligncenter">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tbody><tr>
+                                        <td class="content-block">
+                                            <h2>We hope you enjoy your stay!</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content-block">
+                                            <table class="invoice">
+                                                <tbody><tr>
+                                                    <td>{{fullname}}<br>Invoice #12345<br>{{username}}<br>{{date_today}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                            
+                                                            
+                                                                <p>{{Room_type}} Room </p>
+                                                                <p>from {{date_from}} to {{date_to}}</p>
+                                                                <p>$ {{roomprice}} /night</p>
+                                                            
+                                                            
+
+                                                            <tr class="total">
+                                                                <td class="alignright" width="80%">Total</td>
+                                                                <td class="alignright">$ {{total}}</td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content-block">
+                                            <a href="#">Print receipt</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="content-block">
+                                            Moonlight Hotel 
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <div class="footer">
+                        <table width="100%">
+                            <tbody><tr>
+                                <td class="aligncenter content-block">Questions? Email <a href="mailto:">Moonlight-hotel@hotmail.html</a></td>
+                            </tr>
+                        </tbody></table>
+                    </div></div>
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+  </body>

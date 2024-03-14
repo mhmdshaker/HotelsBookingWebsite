@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>rooms</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/history.css') }}"> 
+</head>
+<body> 
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                
+                <img src="logo.jpg" class="logo">
+            </div>
+
+            <div class="menu">
+                <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="book#about">ABOUT</a></li>
+                  <li><a href="book#packages">OFFERS</a></li>
+                  <li><a href="book#contact">CONTACT</a></li>  
+                  <li><a href="room">ROOMS</a></li>
+                  <li><a href="book">Book Now</a></li>
+                  <li><a href="profile">PROFILE</a></li>
+                  <li><a href="history">HISTORY</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <section class="offer mtop" id="services">
+        <div class="container">
+          <div class="heading">
+            <h1>Your History With Us </h1>
+
+          </div>
+        <div class= "containerCurrent">
+           <div class="box">
+              <i class="titlee"></i>
+              <h2>Currently booked</h2>
+              <form method="POST">
+          {%for i in cbr%}
+          
+            <div class="box flex">
+              <div class="right">
+                <h5>Room Type: {{ i['roomtype'] }}</h5>
+                <h5>Room ID:{{ i['_id'] }}
+                <h5>Price Paid: {{i['price']}}$</h5>
+                <h5>Date Reserved: {{i['dat']}}</h5>
+                <button  name='cancel_reservation' value="{{ i['dat'] }}">
+                  <span>Cancel Reservation</span>
+                </button>
+                
+                
+              </div>
+            </div>
+            {%endfor%}
+
+          </div>
+        </div>
+
+        <section class="offer mtop" id="services">
+      
+          <div class= "containerCurrent">
+             <div class="box">
+                <i class="titlee"></i>
+                <h2>All Booked Rooms</h2>
+                
+                {%for i in pbr%}
+                <div class="box flex">
+                  <div class="right">
+                    <h5>Room Type: {{ i['roomtype'] }}</h5>
+                    <h5>Room ID:{{ i['_id'] }}
+                    <h5>Price Paid: {{i['price']}}$</h5>
+                    <h5>Date Reserved: {{i['dat']}}</h5>
+                  </div>
+                </div>
+                {%endfor%}
+              </form>
+            </div>
+          </div>
+         
+        </div>
+      </section>
+</body>

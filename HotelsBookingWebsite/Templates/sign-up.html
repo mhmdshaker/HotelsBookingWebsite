@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/sign-up.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+        <div class="user-details">
+        <form method = "POST">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name = "FullName" id="name-field"  value = "{{ FullName }}" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" name = "UserName" id="username-field" value ="{{ UserName }}"required>
+            <p style="color:red">{{ error_statment_username_used }}</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email"  name = "Email" id="email-field" value = "{{ Email }}"required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" name = "PhoneNumber" id="phonenumber-field" value = "{{ PhoneNumber }}"required>
+            <p style="color:red">{{ error_statment_phone_number }}</p>
+            <p style="color:red">{{ error_statment_password_weak }}</p>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" name = "Password" id="password-field" value = "{{ Password }}" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" name= "PasswordConfirm" id="username-field" required>
+            <p style="color:red">{{error_statment_password_mismatch }}</p>
+          </div>
+
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</form>
+</body>
+</html>

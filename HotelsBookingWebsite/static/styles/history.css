@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  .main{
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient(rgba(15, 2, 34, 0.746),rgba(24, 8, 36, 0.75)), url(h2.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+body {
+  scroll-behavior: smooth;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    width: 80px;
+    cursor: pointer;
+    
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left:2px;
+}
+
+.menu ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover{
+    color: #006eff;
+}
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+  .heading{
+    background: linear-gradient(90deg, #B313CDFF 32%, #2638D4FF 97%);
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.offer .mtop .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+
+
+  .left, .right {
+    width: 50%;
+  }
+  .room {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .room img {
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+  }
+
+/* rooms */
+ /*------------timer------------*/
+/*------------offer------------*/
+
+.offer .right {
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+  }
+  
+  .offer .content h4 {
+    font-size: 20px;
+    color: #627795;
+    font-family: serif;
+  }
+  
+
+  
+  .offer .content h5 {
+    color: #627795;
+    margin-bottom: 10px;
+  }
+  .containerCurrent .box{
+    color:black; 
+
+  }
+  
+
+  
+
+
+
+ 

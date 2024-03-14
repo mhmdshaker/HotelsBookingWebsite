@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bookit</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/userstyle.css') }}"> 
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                
+                <img src="{{ url_for('static',filename='styles/logo.jpg') }}" class="logo">
+            </div>
+
+            <div class="menu">
+                <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="book#about">ABOUT</a></li>
+                  <li><a href="book#packages">OFFERS</a></li>
+                  <li><a href="book#contact">CONTACT</a></li>  
+                  <li><a href="room">ROOMS</a></li>
+                  <li><a href="book">Book Now</a></li>
+                  <li><a href="profile">PROFILE</a></li>
+                  <li><a href="history">HISTORY</a></li>
+                </ul>
+            </div>
+
+
+
+        </div> 
+    <form method="POST">
+    <section class="book">
+        <div class="container grid1">
+          <input type="date" placeholder="Date Arrival" name = "from" required/>
+          <input type="date" placeholder="Date Departure" name = "to" required/>
+          <input type="number" placeholder="beds" name="numberofbeds" required/>
+          <button class="find" name = "submit_button", value="findbtn"><a>Find</a></button>
+        </div>  
+    </section>
+
+    <section class="tuser">
+        <div class="tuser">
+            <h1>BOOK YOUR ROOM</h1>
+            {%for messages in get_flashed_messages() %}
+
+            <div class="alert">
+        
+                  <p>{{message}}</p>
+        
+           </div>
+        
+        {%endfor%}
+            <p>insert the following</p>
+        </div>
+    </section>
+    
+    <!--welcome-->
+    <section class="welcome">
+
+        <div class="container">
+            <div class="headingwelc">
+                <h2>WELCOME TO MOONLIGHT HOTEL</h2>
+            </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="containerAbout">
+          <div class="headingAbout">
+            <h5>EXPLORE</h5>
+            <h2>We are cool to give you pleasure
+            </h2>
+          </div>
+    
+          <div class="content flex  top">
+            <div class="left">
+              <h3> Your favorite Destination </h3>
+              <p>Moon light hotel is located in Beirut, just a 5 minute walk from the downtown in Beirut. It offers a pool, a gym and a restaurant.
+              Each guest room at MoonLight Hotel is equipped with satellite TV, a mini fridge, a desk and a private bathroom. A buffet breakfast is served in the breakfast room every morning so fuests can enjoy a drink from the hotel bar on the terrace.
+              
+            </p>
+              <p> The hotel is just a 10 minute walk from the famous, Raouche rocks.</p>
+              <p>Our unraveled services, outmost professionalism and distinguished facilities create the comfort needed for our guests to enjoy their stay.All rooms have a private bathroom. For your comfort, you will find bathrobes, slippers and free toiletries.</p>
+            
+            </div>
+                <div class="right"></div>
+            </div>
+              <img src="{{ url_for('static',filename='styles/h6.jpg') }}" class="imgAbout">
+          
+        </div>
+      </section>
+      <!---services-->
+      <section class="wrapper2">
+        <div class="container">
+          <div class="headingServ">
+            <h5>SERVICES</h5>
+            <h2>Exceptional service - endless possibilities </h2>
+          </div>
+    
+          <div class="content grid mtop">
+            <div class="box">
+              <i class="pool"></i>
+              <h3>Pool</h3>
+              <p>Go for a refreshing swim and watch the sun slowly sink beneath the horizon from our seasonal outdoor pool.</p>
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <div class="box">
+              <i class="gym"></i>
+              <h3>Gym</h3>
+              <p>Enjoy our gym with no additional cost.</p>
+            </div>
+            <div class="box">
+              <i class="serv"></i>
+              <h3>Room service</h3>
+              <p>All rooms have a private bathroom. For your comfort, you will find bathrobes, slippers and free toiletries.</p>
+            </div>
+            <div class="box">
+              <i class="act"></i>
+              <h3>Activities</h3>
+              <p>Planned boats trip,car rental services,guided tours and other activities are available.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <div class="container">
+        <div class="heading">
+            <h2>SPECIAL OFFERS</h2>
+        </div>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{{ url_for('static',filename='styles/famroom.jpg') }}" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Family room </h3>
+                    <p>Offer expires in 5 days! </p>
+                     <div class="price"> $199.00 <span>$220.00</span> </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{{ url_for('static',filename='styles/couple.jpg') }}" alt="">
+                <div class="content">
+                    <h3> <i class="fas fa-map-marker-alt"></i> Deluxe room</h3>
+                    <p>Offer expires in 6 days!</p>
+                    <div class="price"> $90.00 <span>$120.00</span> </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+    </section>
+    <!--footer/ contact-->
+    <footer>
+      <section class="contact" id="contact">
+        <div class="containerFoot">
+          <div class="boxFoot">
+            <h7>Useful links</h7>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="book#about">ABOUT</a></li>
+                <li><a href="book#packages">OFFERS</a></li>
+                <li><a href="room">ROOMS</a></li>
+                <li><a href="book#contact">CONTACT</a></li>
+                <li><a href="book">Book Now</a></li>
+                <li><a href="history">Profile</a></li>
+            </ul>
+          </div>
+         
+          <div class="boxFoot">
+            <h7>Contact</h7>
+            <ul>
+              <li><a href="https://instagram.com/moon_light_hotell?igshid=YmMyMTA2M2Y=">Our insta page</a></li>
+              <li>+961 76900335</li>
+              <li>moonlight-hotell@hotmail.com</li>
+            </ul>
+        </div>
+      </footer>
+      </section>
+        
+
+    
+  
+      
+  
+</html>

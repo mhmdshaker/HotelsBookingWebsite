@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/profile.css') }}" />
+  </head>
+  <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            
+            <img src="{{ url_for('static',filename='styles/logo.jpg') }}" class="logo">
+        </div>
+
+        <div class="menu">
+            <ul>
+              <li><a href="/">HOME</a></li>
+              <li><a href="book#about">ABOUT</a></li>
+              <li><a href="book#packages">OFFERS</a></li>
+              <li><a href="book#contact">CONTACT</a></li>  
+              <li><a href="room">ROOMS</a></li>
+              <li><a href="book">Book Now</a></li>
+              <li><a href="profile">PROFILE</a></li>
+              <li><a href="history">HISTORY</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+    
+  <body>
+    <h1>Your Profile</h1>
+    <h3>Update Profile Information</h3>
+    {%for messages in get_flashed_messages() %}
+
+    <div class="alert">
+
+          <p>{{message}}</p>
+
+   </div>
+
+    {%endfor%}
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="text">Name:</label>
+        <textarea name="hobbies" readonly>{{uname}}</textarea>
+        <label for="email">Email: </label>
+        <input type="email" id="email" value="{{email}}" name="newmail">
+        <label for="dob">Phone number: </label>
+        <input type="number" id="num" value="{{number}}" name="newnumber">
+        <br>
+        <br>
+        <button name="update" value="creds">Update</button>
+      </fieldset>
+      <fieldset>
+        <legend>Update Password</legend>
+        <label for="oldpassword">Old password: </label>
+        <input type="password" id="oldpassword" name="oldpassword">
+        <br>
+        <label for="newpassword">New password: </label>
+        <input type="password" id="newpassword" name="newpassword">
+        <br>
+        <button name="update" value="pass">Update</button>
+      </fieldset>
+      
+    </form>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+Group:
+Hisham Lakkis
+Mohamad Shaker
+Raghid Abdel Malak
+Lynn El Shami
+
+OS:Windows11
+
+
+Required things:
+download flask
+download pymongo[srv]
+download passlib
+
+
+and then run flask
